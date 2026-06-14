@@ -1,25 +1,43 @@
 /*=============== SHOW & CLOSE MENU ===============*/
+const navMenu = document.getElementById("nav--menu"),
+  navToggle = document.getElementById("nav--toggle"),
+  navClose = document.getElementById("nav--close");
 
+// Show menu
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+
+/* Hide Menu*/
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
 
 /*=============== REMOVE MOBILE MENU ===============*/
 
+const navLink = document.querySelector(".nav__link");
+
+const linkAction = () => {
+  const navMenu = document.getElementById("nav--menu");
+
+  navMenu.classList.remove("show-menu");
+};
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*=============== HOME SWIPER ===============*/
 
-
 /*=============== CHANGE HEADER STYLES ===============*/
-
 
 /*=============== PRODUCTS SWIPER ===============*/
 
-
 /*=============== NEW SWIPER ===============*/
 
-
-/*=============== SHOW SCROLL UP ===============*/ 
-
+/*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
