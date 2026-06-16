@@ -62,7 +62,16 @@ const scrollHeader = () => {
 window.addEventListener("scroll", scrollHeader);
 
 /*=============== PRODUCTS SWIPER ===============*/
-
+const swiperTabs = new Swiper(".product__tabs", {
+  slidesPerView: "auto",
+});
+const swiperProducts = new Swiper(".product__content", {
+  loop: true,
+  spaceBetween: 32,
+  thumbs: {
+    swiper: swiperTabs,
+  },
+});
 /*=============== NEW SWIPER ===============*/
 
 /*=============== SHOW SCROLL UP ===============*/
